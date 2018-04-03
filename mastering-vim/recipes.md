@@ -18,3 +18,38 @@ It's possible to do this by using "cw", which stands for
 
 This command will delete the word from the cursor position until the 
 end of the word and enter the "Insert" mode. 
+
+## Search text through multiple files
+
+You can do this in an easy way by using the "vimgrep" command.
+
+This command, for instance, will search for the string "Insert" in all 
+Markdown files (ending with .md) in the "mastering-vim" directory:
+
+```
+:vimgrep Insert mastering-vim/*.md
+```
+
+If you want to jump to the next and previous entry, use:
+
+```
+:cn[ext] and :cp[revious]
+```
+
+If you want to jump to the next and previous file, use:
+
+```
+:cnf[ile] and :cpf[ile]
+```
+
+If you want to go to the beginning or end of the search list, use:
+
+```
+:cr[ewind] and :cla[st]
+```
+
+Finally, you can discover plenty of other commands using:
+
+```
+:help quickfix
+```
