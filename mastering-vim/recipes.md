@@ -53,3 +53,21 @@ Finally, you can discover plenty of other commands using:
 ```
 :help quickfix
 ```
+
+## Split the buffer into multiple windows safely
+
+Buffers are a very important concept to understand. When you open a file 
+in Vim and start editing it, you are, in fact, only editing a "copy" of 
+the file. The file has actually been opened into a "buffer", and that 
+buffer is just a chunk of memory allocated to holding a copy of the file
+you wanted to edit.
+
+The original file remains unchanged until you actually "write" the 
+buffer back to the file (that's where the `:w` write command comes in; 
+it effectively "saves" the file).
+
+Another reason why buffers are important to understand is that we can 
+utilize them in different ways. For example, because we're dealing with 
+buffers and not the original file, we can safely split the buffer into 
+multiple windows, using the `:sp` command. From there, we can edit/write 
+the buffer in either window, without any conflicts.
