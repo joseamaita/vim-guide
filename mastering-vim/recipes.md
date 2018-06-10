@@ -71,3 +71,19 @@ utilize them in different ways. For example, because we're dealing with
 buffers and not the original file, we can safely split the buffer into 
 multiple windows, using the `:sp` command. From there, we can edit/write 
 the buffer in either window, without any conflicts.
+
+## Get an interactive story of executed commands
+
+To do that, type:
+
+```
+q:
+```
+
+You can edit or run them, by hitting Enter.
+
+```
+vi hello.py
+:w
+:wq
+```
